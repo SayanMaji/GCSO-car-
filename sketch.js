@@ -6,15 +6,16 @@ function setup() {
   createCanvas(1400,400);
 car=createSprite(50,200,50,50);
 car.shapeColor="grey";
-wall=createSprite(1200,200,60,height/2);
+wall=createSprite(1200,200,30,height/2);
+speed=Math.round(random(55,90));
+  weight=Math.round(random(400,1500));
+
  
 }
 function draw() {
   background("blue");  
 
-  speed=Math.round(random(55,90));
-  weight=Math.round(random(400,1500));
-
+  
 car.velocityX=speed;
 
 if(wall.x-car.x<(car.width+wall.width)/2){
